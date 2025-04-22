@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+table,
+form {
+    width: 50%;
+    border: thin solid red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+label,
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e91e63;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.bad_reg {
+    color: red;
+}
