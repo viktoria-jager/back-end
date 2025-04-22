@@ -1,0 +1,118 @@
+body.product .product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.product-list .container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 10px;
+}
+body.product-list .product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 3px grey;
+}
+body.product-list .product-card img {
+  width: 100%;
+}
+
+body.login {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #4a90e2, #007aff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body.login .login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  animation: fadeIn 0.6s ease-out;
+}
+body.login .login-container h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+body.login .form-group {
+  margin-bottom: 1.2rem;
+}
+body.login .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+body.login .form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+body.login .form-group input:focus {
+  border-color: #007aff;
+  outline: none;
+}
+body.login .login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007aff;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+body.login .login-btn:hover {
+  background-color: #005ecb;
+}
+body.login .bottom-text {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+body.login .bottom-text a {
+  color: #007aff;
+  text-decoration: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+}
+
+.termek_form {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: max-content 200px;
+  gap: 5px;
+}
+.termek_form .termek_form_submit {
+  grid-column: span 2;
+}/*# sourceMappingURL=style.css.map */

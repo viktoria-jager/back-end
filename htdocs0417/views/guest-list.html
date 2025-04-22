@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php
+    include_once "common/head.html";
+    ?>
+
+
+</head>
+
+<body class="product-list">
+
+    <section class="container">
+
+        <?php foreach ($data as $termek) : ?>
+        <article class="product-card">
+            <h2>
+                <?=$termek['nev']?>
+            </h2>
+            <a href="/termek/<?=$termek['id']?>"><img src="/<?=$termek['kep']?>" alt=""> </a>
+            <p>
+                <?=$termek['ar']?> Ft
+            </p>
+        </article>
+        <?php endforeach; ?>
+
+
+    </section>
+
+
+    <?php
+    include_once("common/footer.html");
+    ?>
+
+</body>
+
+</html>

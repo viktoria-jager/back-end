@@ -1,0 +1,10 @@
+<footer class="fixed-bottom">
+
+
+    <?php if (isset($_SESSION['adminLogin']) &&  $_SESSION['adminLogin'] == true): ?>
+    <a href="/logout">Logout</a>
+    <?php else: ?>
+    <a href="/login">Admin login</a>
+    <?php endif; ?>
+
+</footer>

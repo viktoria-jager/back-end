@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php
+    include_once "common/head.html";
+    ?>
+
+
+</head>
+<body class="product-list">
+
+
+    <section class="form">
+        <form action="/termek/<?=$updateData['id'] ?? '' ?>" method="POST" enctype="multipart/form-data" class="termek_form">
+
+            <label for="nev">Név</label>
+            <input type="text" id="nev" name="nev" value="<?=$updateData['nev'] ?? '' ?>">
+
+            <label for="ar">Ár</label>
+            <input type="number" id="ar" name="ar" value="<?=$updateData['ar'] ?? '' ?>"> 
+
+            <label for="kep">Kép</label>
+            
+            <div>
+                <input type="file" id="kep" name="kep"> 
+                <input type="hidden" name="originalImage" value="<?=$updateData['kep'] ?? '' ?>">
+                <img src="/<?=$updateData['kep'] ?? '' ?>" width="30" alt="">
+            </div>
+            
+            <label for="raktaron">Raktáron</label>
+            <input type="number" id="raktaron" name="raktaron" value="<?=$updateData['raktaron'] ?? '' ?>"> 
+
+            <input type="submit" class="termek_form_submit" value="OK"> 
+        </form>
+
+
+    </section>
+
+
+    <section class="container">
+
+        <?php foreach ($data as $termek) : ?>
+        <article class="product-card">
+            <h2><?=$termek['nev']?></h2>
+            <img src="/<?=$termek['kep']?>" alt="">
+            <p><?=$termek['ar']?> Ft</p>
+
+            <a href="/termek/<?=$termek['id']?>">Szerk</a>
+            <a href="/termekdelete/<?=$termek['id']?>">Törlés</a>
+        </article>
+        <?php endforeach; ?>
+
+    </section>
+
+
+
+
+
+
+    <?php
+    include_once("common/footer.html");
+    ?>
+
+</body>
+</html>

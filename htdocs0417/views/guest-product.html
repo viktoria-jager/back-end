@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <?php
+    include_once("views/common/head.html");
+    ?>
+
+
+</head>
+
+<body class="product">
+
+    <section class="product-card">
+        <h2><?=$updateData['nev']?></h2>
+        <img src="/<?=$updateData['kep']?>" alt="">
+        <p><?=$updateData['ar']?> Ft</p>
+        <p><?=$updateData['raktaron']?> db</p>
+    </section>
+
+    <a href="/">Vissza</a>
+
+    <?php
+    include_once("common/footer.html");
+    ?>
+</body>
+
+</html>
