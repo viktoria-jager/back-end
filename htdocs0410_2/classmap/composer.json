@@ -1,0 +1,13 @@
+{
+    "name": "neo/app",
+    "autoload": {
+        "classmap": ["src", "lib"]
+    },
+    "authors": [
+        {
+            "name": "NEOG001",
+            "email": "gabor.neogrady.p92@sonymusic.com"
+        }
+    ],
+    "require": {}
+}
